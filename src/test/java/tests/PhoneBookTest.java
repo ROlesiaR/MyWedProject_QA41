@@ -5,7 +5,7 @@ import config.BaseTest;
 import helpers.TopMenuItem;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pages.Login;
+import pages.LoginPage;
 import pages.MainPage;
 
 public class PhoneBookTest extends BaseTest {
@@ -14,9 +14,8 @@ public class PhoneBookTest extends BaseTest {
 @Parameters("browser")
     public void phoneBookTest_001(String browser) throws InterruptedException {
         MainPage mainPage = new MainPage(getDriver());
-        Login loginPage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
-        loginPage.fillEmailField("myemail2@mail.com").clickRegistrationButton();
+        LoginPage loginPage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
+        loginPage.fillEmailField("myemail3@mail.com").fillPasswordField("12345Test#").clickRegistrationButton();
         Thread.sleep(5000);
-
     }
 }

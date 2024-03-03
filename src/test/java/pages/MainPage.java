@@ -19,11 +19,11 @@ public class MainPage extends BasePage {
 
         switch (topMenuItem) {
             case "HOME":
-                return (T) new Home(driver);
+                return (T) new HomePage(driver);
             case "ABOUT":
-                return (T) new About(driver);
+                return (T) new AboutPage(driver);
             case "LOGIN":
-                return (T) new Login(driver);
+                return (T) new LoginPage(driver);
 
             default:
                 throw new IllegalArgumentException("Somethings wrong" + topMenuItem);
