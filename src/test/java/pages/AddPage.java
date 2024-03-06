@@ -26,7 +26,8 @@ public class AddPage extends BasePage {
     WebElement addressField;
     @FindBy(xpath ="//input[@placeholder='description']")
     WebElement descriptionField;
-    @FindBy(xpath = "//b[contains(text(),'Save')]")
+   // @FindBy(xpath = "//b[contains(text(),'Save')]")
+    @FindBy(xpath = "//b[normalize-space()='Save']")
     WebElement saveButton;
     public AddPage (WebDriver driver){
         setDriver(driver);
@@ -44,7 +45,7 @@ public class AddPage extends BasePage {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(5000));
         WebElement saveButton = wait.until(ExpectedConditions.
-                visibilityOfElementLocated(By.xpath("//b[contains(text(),'Save']")));
+                visibilityOfElementLocated(By.xpath("//b[normalize-space()='Save']")));
                 saveButton.click();
     }
 }

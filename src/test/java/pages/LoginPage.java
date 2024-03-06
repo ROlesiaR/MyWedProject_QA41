@@ -33,9 +33,9 @@ public class LoginPage extends BasePage {
         passwordField.sendKeys(password);
         return this;
     }
-    public LoginPage clickRegistrationButton (){
+    public Alert clickRegistrationButton (){
         registrationButton.click();
-        return this;
+        return getAlertIfPresent();
     }
     public BasePage clickLoginButton(){
         loginButton.click();
