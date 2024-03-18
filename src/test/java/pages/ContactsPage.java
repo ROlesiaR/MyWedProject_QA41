@@ -55,7 +55,9 @@ public class ContactsPage extends BasePage{
         //System.out.println(listContact);
         boolean result = listContact.equals(contact);
         return result;
-
+    }
+    public boolean isElementPersist(WebElement element){
+        return isElementPresent(element);
     }
 }
 
